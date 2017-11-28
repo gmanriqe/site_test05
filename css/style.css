@@ -1,3 +1,5 @@
+/*** Declarando Variables ***/
+/*** Importando Archivos ***/
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -393,7 +395,6 @@ template {
 [hidden] {
   display: none; }
 
-/* normalize */
 *,
 *::before,
 *::after,
@@ -402,7 +403,9 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  font-size: 13px;
+  font-family: "Zilla Slab", serif; }
+
 img {
   max-width: 100%; }
-
-/* base */

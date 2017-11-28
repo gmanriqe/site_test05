@@ -1,12 +1,32 @@
-@import "__normalize.scss"; /* normalize */
-@import "__base.scss"; /* base */
+/*** Declarando Variables ***/
 
-// base
+// Paleta de color (como minimo 3 colores)
+$primary-color: #00012d;
+$secondary-color: #e13849;
+$third-color: #fdcb2f;
+$fourth-color: #ececec;
+// Tamaño de Fuente
+$xl: 24px;
+$l: 20px;
+$m: 16px;
+$s: 13px;
+$xs: 11px;
+// Tipo de Fuente
+$font: 'Zilla Slab', serif;
+// Variables de Layout
+$gutter: 16px; // Espacios entre contenedores
+$max-width: 1200px; // Limite de nuestro site
 
-// layout
 
-// modules
 
-//state
-
-//theme
+/*** Importando Archivos ***/
+ // 1. normalize
+@import "__normalize.scss";
+// 2.layout
+// 3.header
+// 4.modules
+// 5.base
+@import "__base.scss";
+// 6.menu
+// 7.banner
+// 8.features
