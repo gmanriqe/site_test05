@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*** Declarando Variables ***/
 /*** Importando Archivos ***/
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -395,6 +396,50 @@ template {
 [hidden] {
   display: none; }
 
+.main-container {
+  width: 100%;
+  max-width: 1200px; }
+
+/* Parte de una web que se va a repetir (reutilizar codigo)*/
+.contact-widget {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .contact-widget__icon {
+    width: 2em;
+    height: 2em;
+    /*recuerda 2em es el tamaño del font-size en este caso 19.5*2*/
+    background-color: #00002a;
+    color: #fff;
+    text-align: center;
+    line-height: 2.3em;
+    font-size: 1.5em; }
+  .contact-widget__data {
+    margin-left: .5em; }
+  .contact-widget__title {
+    margin: 0;
+    line-height: 1; }
+  .contact-widget__content {
+    margin: 0; }
+
+.button {
+  text-decoration: none;
+  line-height: 3;
+  display: inline-block;
+  padding: 0 1em; }
+  .button--dark {
+    background-color: #ff2e4d;
+    color: #fff; }
+  .button--light {
+    background-color: #fff;
+    color: #00002a; }
+  .button--cta {
+    background-color: #ff2e4d;
+    color: #fff; }
+  .button--square {
+    padding: 0; }
+
 *,
 *::before,
 *::after,
@@ -409,3 +454,52 @@ body {
 
 img {
   max-width: 100%; }
+
+.main-header {
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .main-header-1 .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%; }
+  .main-header-2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .main-header .contact-widget {
+    display: none; }
+
+.main-nav {
+  background-color: #00002a; }
+  .main-nav .main-menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+    .main-nav .main-menu__item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    .main-nav .main-menu__link {
+      display: block;
+      line-height: 2;
+      padding: 0 1em;
+      text-decoration: none;
+      color: #fff; }
+  .main-nav .social-networks {
+    padding-left: 1em; }
+    .main-nav .social-networks a {
+      text-decoration: none;
+      color: #fff;
+      display: inline-block;
+      line-height: 3; }

@@ -1,8 +1,8 @@
 /*** Declarando Variables ***/
 
 // Paleta de color (como minimo 3 colores)
-$primary-color: #00012d;
-$secondary-color: #e13849;
+$primary-color: #00002a;
+$secondary-color: #ff2e4d;
 $third-color: #fdcb2f;
 $fourth-color: #ececec;
 // Tamaño de Fuente
@@ -21,12 +21,74 @@ $max-width: 1200px; // Limite de nuestro site
 
 /*** Importando Archivos ***/
  // 1. normalize
-@import "__normalize.scss";
+@import "_normalize.scss";
 // 2.layout
+@import "_layout.scss";
 // 3.header
 // 4.modules
+@import "_modules.scss";
 // 5.base
-@import "__base.scss";
+@import "_base.scss";
 // 6.menu
 // 7.banner
 // 8.features
+
+// 3.header
+.main-header {
+    padding: $gutter;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &-1 {
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+    }
+
+    &-2 {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-widget {
+        display: none;
+    }
+}
+
+// 6.menu
+.main-nav {
+    background-color: $primary-color;
+
+    .main-menu {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    
+        &__item {
+            border-bottom: 1px solid rgba(#fff,.5);
+        }
+    
+        &__link {
+            display: block;
+            line-height: 2;
+            padding: 0 1em;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    .social-networks {
+        padding-left: 1em;
+        a {
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            line-height: 3;
+        }
+    }
+}
