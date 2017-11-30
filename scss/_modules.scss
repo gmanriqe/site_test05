@@ -53,3 +53,16 @@
     }
 
 }
+
+.main-nav {
+    .social-networks {
+        padding-left: 1em;
+        a {
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            line-height: 3;
+            margin-right: .5em
+        }
+    }
+}

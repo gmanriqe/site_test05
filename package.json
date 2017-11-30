@@ -1,0 +1,27 @@
+{
+  "name": "devmaster",
+  "version": "1.0.0",
+  "description": "sitio web alternativo devmaster",
+  "main": "index.js",
+  "scripts": {
+    "test": "html5 css3 js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmanriqe/site_test05.git"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "js"
+  ],
+  "author": "gmanriqe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmanriqe/site_test05/issues"
+  },
+  "homepage": "https://github.com/gmanriqe/site_test05#readme",
+  "devDependencies": {
+    "jquery": "^3.2.1"
+  }
+}
