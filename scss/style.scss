@@ -36,7 +36,7 @@ $max-width: 1200px; // Limite de nuestro site
 
 // 3.header
 .main-header {
-    padding: $gutter;
+    padding: $gutter*2 0 $gutter;
 
     display: flex;
     flex-wrap: wrap;
@@ -53,6 +53,11 @@ $max-width: 1200px; // Limite de nuestro site
 
             @media screen and (min-width: 640px) {
                 width: 100%;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 70%;
+                margin-left: 0;
             }
         }
 
@@ -87,15 +92,30 @@ $max-width: 1200px; // Limite de nuestro site
     text-align: center;
     font-size: $xl;
 
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
 }
 
 // 6.menu
 .main-nav {
     background-color: $primary-color;
-    display: none;
+    display: block;
 
-    &.show {
-        display: block;
+    @media screen and (max-width: 1024px) {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 1.5rem;
+        z-index: 10;
     }
 
     .main-menu {
@@ -103,14 +123,22 @@ $max-width: 1200px; // Limite de nuestro site
         padding-left: 0;
         margin-top: 0;
         margin-bottom: 0;
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+        }
     
         &__item {
             border-bottom: 1px solid rgba(#fff,.5);
+            
+            @media screen and (min-width: 1024px) {
+                border-bottom: none;
+            }
         }
     
         &__link {
             display: block;
-            line-height: 2;
+            line-height: 3rem;
             padding: 0 1em;
             text-decoration: none;
             color: #fff;
@@ -120,7 +148,10 @@ $max-width: 1200px; // Limite de nuestro site
 
 // 7.banner
 .main-banner {
+    padding: 20em 0;
     position: relative;
+    background: url(../imagen/banner_devmaster.jpg) center / cover no-repeat;
+    z-index: 1;
 
     &::before {
         content: "";
@@ -133,17 +164,12 @@ $max-width: 1200px; // Limite de nuestro site
         opacity: .4;
     }
 
-    &__img {
-        display: block;
-    }
-
     &__data {
         display: flex;
         flex-wrap: wrap;
         position: absolute;
         width: 55%;
         top: 50%;
-        left: 2em;
         transform: translateY(-50%);
 
         @media screen and (min-width: 480px) {
@@ -205,13 +231,84 @@ $max-width: 1200px; // Limite de nuestro site
     } 
     
     &__description {
-        font-size: $xs;
+        font-size: $s;
         line-height: 1.6
     }
 
     .button {
         @media screen and (min-width: 768px){
             margin-right: 1em;
+        }
+    }
+}
+
+//features
+.section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__title {
+        span {
+            color: $secondary-color;
+        }
+    }
+
+    .feature-item-container {
+        padding: 0 $gutter;
+
+        @media screen and (min-width: 640px){
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
+    }
+
+    .main-container {
+        .feature-item {
+            margin-bottom: $gutter*2;
+
+            @media screen and (min-width: 640px){
+                width: 32%;
+            }
+
+            &__img {
+                display: block;
+                width: 100%;
+            }
+
+            &__footer {
+                display: flex;
+                position: relative;
+            }
+
+            &__title {
+                background-color: $fourth-color;
+                margin: 0;
+                width: 70%;
+                padding: .8em;
+                font-size: $s;
+                // color: hsl(0,100,100);
+            }
+
+            &__icon {
+                background-color: $secondary-color;
+                position: absolute;
+                left: 65%;
+                bottom: 0;
+
+                //hexagono
+                $size: 2rem;
+                width: $size*2;
+                height: $size*1.73;
+
+                clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+
+            }
         }
     }
 }

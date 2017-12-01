@@ -398,14 +398,20 @@ template {
 
 .main-container {
   width: 100%;
-  max-width: 1200px; }
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
 
 /* Parte de una web que se va a repetir (reutilizar codigo)*/
 .contact-widget {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .contact-widget__icon {
     width: 2em;
     height: 2em;
@@ -413,7 +419,7 @@ template {
     background-color: #00002a;
     color: #fff;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 20px;
     margin-left: .5em; }
     .contact-widget__icon.button {
       line-height: 2.3em; }
@@ -421,9 +427,11 @@ template {
     margin-left: .5em; }
   .contact-widget__title {
     margin: 0;
-    line-height: 1; }
+    line-height: 1;
+    font-size: 16px; }
   .contact-widget__content {
-    margin: 0; }
+    margin: 0;
+    font-size: 13px; }
 
 .button {
   text-decoration: none;
@@ -443,7 +451,8 @@ template {
     padding: 0; }
 
 .main-nav .social-networks {
-  padding-left: 1em; }
+  padding-left: 16px;
+  padding-right: 16px; }
   .main-nav .social-networks a {
     text-decoration: none;
     color: #fff;
@@ -467,7 +476,7 @@ img {
   max-width: 100%; }
 
 .main-header {
-  padding: 16px;
+  padding: 32px 0 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -490,6 +499,10 @@ img {
       @media screen and (min-width: 640px) {
         .main-header-1 .logo {
           width: 100%; } }
+      @media screen and (min-width: 1024px) {
+        .main-header-1 .logo {
+          width: 70%;
+          margin-left: 0; } }
     @media screen and (min-width: 640px) {
       .main-header-1 {
         width: 20%; } }
@@ -520,28 +533,63 @@ img {
   cursor: pointer;
   text-align: center;
   font-size: 24px; }
+  @media screen and (min-width: 1024px) {
+    .toggle-menu {
+      display: none; } }
 
 .main-nav {
   background-color: #00002a;
-  display: none; }
-  .main-nav.show {
-    display: block; }
+  display: block; }
+  @media screen and (max-width: 1024px) {
+    .main-nav {
+      display: none; }
+      .main-nav.show {
+        display: block; } }
+  @media screen and (min-width: 1024px) {
+    .main-nav {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: relative;
+      top: 1.5rem;
+      z-index: 10; } }
   .main-nav .main-menu {
     list-style-type: none;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0; }
+    @media screen and (min-width: 1024px) {
+      .main-nav .main-menu {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
     .main-nav .main-menu__item {
       border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+      @media screen and (min-width: 1024px) {
+        .main-nav .main-menu__item {
+          border-bottom: none; } }
     .main-nav .main-menu__link {
       display: block;
-      line-height: 2;
+      line-height: 3rem;
       padding: 0 1em;
       text-decoration: none;
       color: #fff; }
 
 .main-banner {
-  position: relative; }
+  padding: 20em 0;
+  position: relative;
+  background: url(../imagen/banner_devmaster.jpg) center/cover no-repeat;
+  z-index: 1; }
   .main-banner::before {
     content: "";
     position: absolute;
@@ -554,8 +602,6 @@ img {
     background: -o-linear-gradient(left, #ff2e4d, #FFFFFF);
     background: linear-gradient(90deg, #ff2e4d, #FFFFFF);
     opacity: .4; }
-  .main-banner__img {
-    display: block; }
   .main-banner__data {
     display: -webkit-box;
     display: -webkit-flex;
@@ -567,7 +613,6 @@ img {
     position: absolute;
     width: 55%;
     top: 50%;
-    left: 2em;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
@@ -615,8 +660,58 @@ img {
       height: 2px;
       background: #ff2e4d; }
   .main-banner__description {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.6; }
   @media screen and (min-width: 768px) {
     .main-banner .button {
       margin-right: 1em; } }
+
+.section {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  .section__title, .section__subtitle {
+    text-align: center; }
+  .section__title span {
+    color: #ff2e4d; }
+  .section .feature-item-container {
+    padding: 0 16px; }
+    @media screen and (min-width: 640px) {
+      .section .feature-item-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 0; } }
+  .section .main-container .feature-item {
+    margin-bottom: 32px; }
+    @media screen and (min-width: 640px) {
+      .section .main-container .feature-item {
+        width: 32%; } }
+    .section .main-container .feature-item__img {
+      display: block;
+      width: 100%; }
+    .section .main-container .feature-item__footer {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative; }
+    .section .main-container .feature-item__title {
+      background-color: #ececec;
+      margin: 0;
+      width: 70%;
+      padding: .8em;
+      font-size: 13px; }
+    .section .main-container .feature-item__icon {
+      background-color: #ff2e4d;
+      position: absolute;
+      left: 65%;
+      bottom: 0;
+      width: 4rem;
+      height: 3.46rem;
+      -webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+      clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%); }

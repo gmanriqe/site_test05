@@ -1,14 +1,14 @@
 /* Parte de una web que se va a repetir (reutilizar codigo)*/
 .contact-widget {
     display: flex;
-
+    align-items: center;
     &__icon {
         width: 2em;
         height: 2em; /*recuerda 2em es el tamaño del font-size en este caso 19.5*2*/
         background-color: $primary-color;
         color: #fff;
         text-align: center;
-        font-size: 1.4em;
+        font-size: $l;
         margin-left: .5em;
 
         &.button {
@@ -22,11 +22,13 @@
 
     &__title {
         margin: 0;
-        line-height: 1
+        line-height: 1;
+        font-size: $m;
     }
 
     &__content {
         margin: 0;
+        font-size: $s;
     }
 }
 
@@ -60,7 +62,8 @@
 
 .main-nav {
     .social-networks {
-        padding-left: 1em;
+        padding-left: $gutter;
+        padding-right: $gutter;
         a {
             text-decoration: none;
             color: #fff;
