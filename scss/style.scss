@@ -20,23 +20,24 @@ $max-width: 1200px; // Limite de nuestro site
 
 
 /*** Importando Archivos ***/
- // 1. normalize
+// 1.normalize
 @import "_normalize.scss";
-// 2.layout
+// 2.base
+@import "_base.scss";
+// 3.layout
 @import "_layout.scss";
-// 3.header
 // 4.modules
 @import "_modules.scss";
-// 5.base
-@import "_base.scss";
-// hamburger button
-// 6.menu
-// 7.banner
-// 8.features
-// 9.data
-// 10.footer
+// 5.header
+// 6.hamburger button
+// 7.menu
+// 8.banner
+// 9.features
+// 10.data
+// 11.projects
+// 12.footer
 
-// 3.header
+// 5.header
 .main-header {
     padding-top: $gutter * 2; 
     padding-bottom: $gutter * 0.5;
@@ -89,7 +90,7 @@ $max-width: 1200px; // Limite de nuestro site
     }
 }
 
-//hamburger button
+// 6.hamburger button
 .toggle-menu {
     cursor: pointer;
     text-align: center;
@@ -100,7 +101,7 @@ $max-width: 1200px; // Limite de nuestro site
     }
 }
 
-// 6.menu
+// 7.menu
 .main-nav {
     background-color: $primary-color;
     display: block;
@@ -149,7 +150,7 @@ $max-width: 1200px; // Limite de nuestro site
     }
 }
 
-// 7.banner
+// 8.banner
 .main-banner {
     padding: 20em 0;
     position: relative;
@@ -245,7 +246,7 @@ $max-width: 1200px; // Limite de nuestro site
     }
 }
 
-//features
+// 9.features
 .section {
     padding-top: 2em;
     padding-bottom: 2em;
@@ -328,7 +329,7 @@ $max-width: 1200px; // Limite de nuestro site
     }
 }
 
-//data
+// 10.data
 .section-data {
     background: url(https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb) center / cover no-repeat;
     // clip-path: polygon(0 0,100% 0,100% 100%,0 84%);
@@ -397,7 +398,7 @@ $max-width: 1200px; // Limite de nuestro site
     }
 }
 
-//projects
+// 11.projects
 .section-projects {
     .gallery-container  {
         @media screen and (min-width: 640px) {
@@ -446,7 +447,7 @@ $max-width: 1200px; // Limite de nuestro site
     }
 }
 
-//footer
+// 12.footer
 .main-footer {
     background-color: $primary-color;
     color: rgba(#fff, .7);
@@ -461,6 +462,7 @@ $max-width: 1200px; // Limite de nuestro site
     .main-footer__inner {
         @media screen and (min-width: 1024px) {
             display: flex;
+
 
             p:first-child {
                 margin-right: auto;

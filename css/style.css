@@ -396,6 +396,21 @@ template {
 [hidden] {
   display: none; }
 
+*,
+*::before,
+*::after,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size: 13px;
+  font-family: "Zilla Slab", serif; }
+
+img {
+  max-width: 100%; }
+
 .main-container {
   width: 100%;
   max-width: 1200px;
@@ -461,21 +476,6 @@ template {
     display: inline-block;
     line-height: 3;
     margin-right: .5em; }
-
-*,
-*::before,
-*::after,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-body {
-  font-size: 13px;
-  font-family: "Zilla Slab", serif; }
-
-img {
-  max-width: 100%; }
 
 .main-header {
   padding-top: 32px;
